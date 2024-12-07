@@ -1,4 +1,6 @@
-# When you call loss.backward(), the gradient of the loss is computed only with respect to the variables (or parameters) that have requires_grad=True
+## When you call loss.backward(), the gradient of the loss is computed only with respect to the variables (or parameters) that have requires_grad=True
+- [[Leaf Nodes]] are the variables (or parameters) that have requires_grad=True and are user created.
+- Generally `requires_grad=True` is used only for leaf nodes. but if other variables also have requires grad=true they also participate in gradient with respect to them be
 ### Key Points:
 
 1. **`requires_grad=True` Marks Variables for Gradient Calculation:**
