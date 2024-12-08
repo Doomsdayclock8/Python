@@ -56,7 +56,7 @@ When we design software to implement neural networks, we want to come up with a 
 
 We galvanise this idea in form of a data structure called a **Computation graph**. A computation graph looks very similar to the diagram of the graph that we made in the image above. However, the nodes in a computation graph are basically **operators**. These operators are basically the mathematical operators except for one case, where we need to represent creation of a user-defined variable.
 
-Notice that we have also denoted the leaf variables $ a, w_1, w_2, w_3, w_4$ in the graph for sake of clarity. However, it should noted that they are not a part of the computation graph. What they represent in our graph is the special case for user-defined variables which we just covered as an exception.
+Notice that we have also denoted the leaf variables $a, w_1, w_2, w_3, w_4$ in the graph for sake of clarity. However, it should noted that they are not a part of the computation graph. What they represent in our graph is the special case for user-defined variables which we just covered as an exception.
 
 ![image](https://doimages.nyc3.cdn.digitaloceanspaces.com/010AI-ML/content/images/2019/03/computation_graph.png)
 
@@ -68,7 +68,7 @@ The variables, _b,c_ and _d_ are created as a result of mathematical operati
 
 Now, we are ready to describe how we will compute gradients using a computation graph.
 
-Each node of the computation graph, with the exception of leaf nodes, can be considered as a function which takes some inputs and produces an output. Consider the node of the graph which produces variable _d_ from $ w_4c$ and $w_3b$. Therefore we can write,
+Each node of the computation graph, with the exception of leaf nodes, can be considered as a function which takes some inputs and produces an output. Consider the node of the graph which produces variable _d_ from $w_4c$ and $w_3b$. Therefore we can write,
 
 $$ d = f(w_3b , w_4c) $$
 
@@ -90,7 +90,7 @@ Backpropagation in a Computational Graph
 
 Following we describe the algorithm for computing derivative of any node in this graph with respect to the loss, $L$. Let’s say we want to compute the derivative, $\frac{\partial{f}}{\partial{w_4}}$.
 
-1. We first trace down all possible paths from _d_ to $ w_4 $.
+1. We first trace down all possible paths from _d_ to $w_4$.
 2. There is only one such path.
 3. We multiply all the edges along this path.
 
@@ -136,7 +136,7 @@ Copy
 
 Each `Tensor` has a something an attribute called `grad_fn`_,_ which refers to the mathematical operator that create the variable. If `requires_grad` is set to False, `grad_fn` would be None.
 
-In our example where, $  d = f(w_3b , w_4c) $, _d_’s grad function would be the addition operator, since _f_ adds it’s to input together. Notice, addition operator is also the node in our graph that output’s _d_. If our `Tensor` is a leaf node (initialised by the user), then the `grad_fn` is also None.
+In our example where, $d = f(w_3b , w_4c)$, _d_’s grad function would be the addition operator, since _f_ adds it’s to input together. Notice, addition operator is also the node in our graph that output’s _d_. If our `Tensor` is a leaf node (initialised by the user), then the `grad_fn` is also None.
 
 ```
 import torch 
@@ -153,16 +153,12 @@ print("The grad fn for a is", a.grad_fn)
 print("The grad fn for d is", d.grad_fn)
 ```
 
-Copy
-
 If you run the code above, you get the following output.
 
 ```
 The grad fn for a is None
 The grad fn for d is <AddBackward0 object at 0x1033afe48>
 ```
-
-Copy
 
 One can use the member function `is_leaf` to determine whether a variable is a leaf `Tensor` or not.
 
@@ -181,8 +177,8 @@ Let’s again understand with our example of  $$ d = f(w_3b , w_4c) $$
 3. The `backward` function of the `<ThAddBackward>` basically takes the the **incoming gradient** from the further layers as the input. This is basically $\frac{\partial{L}}{\partial{d}}$ coming along the edge leading from _L_ to _d._ This gradient is also the gradient of _L_ w.r.t to _d_ and is stored in `grad` attribute of the `d`. It can be accessed by calling `d.grad`_._
 4. It then takes computes the local gradients  $\frac{\partial{d}}{\partial{w_4c}}$ and $\frac{\partial{d}}{\partial{w_3b}}$.
 5. Then the backward function multiplies the incoming gradient with the **locally computed gradients** respectively and _**"**_sends_**"**_ the gradients to it’s inputs by invoking the backward method of the `grad_fn` of their inputs.
-6. For example, the `backward` function of `<ThAddBackward>` associated with _d_ invokes backward function of the _grad_fn_ of the $w_4*c$ (Here, $w_4*c$ is a intermediate Tensor, and it’s _grad_fn_ is `<ThMulBackward>`. At time of invocation of the `backward` function, the gradient $\frac{\partial{L}}{\partial{d}} * \frac{\partial{d}}{\partial{w_4c}} $ is passed as the input.
-7. Now, for the variable $w_4*c$, $\frac{\partial{L}}{\partial{d}} * \frac{\partial{d}}{\partial{w_4c}} $ becomes the incoming gradient, like $\frac{\partial{L}}{\partial{d}} $ was for _$_d_$_ in step 3 and the process repeats.
+6. For example, the `backward` function of `<ThAddBackward>` associated with _d_ invokes backward function of the _grad_fn_ of the $w_4*c$ (Here, $w_4*c$ is a intermediate Tensor, and it’s _grad_fn_ is `<ThMulBackward>`. At time of invocation of the `backward` function, the gradient $\frac{\partial{L}}{\partial{d}} * \frac{\partial{d}}{\partial{w_4c}}$ is passed as the input.
+7. Now, for the variable $w_4*c$, $\frac{\partial{L}}{\partial{d}} * \frac{\partial{d}}{\partial{w_4c}}$ becomes the incoming gradient, like $\frac{\partial{L}}{\partial{d}}$ was for _$_d_$ in step 3 and the process repeats.
 
 Algorithmically, here’s how backpropagation happens with a computation graph. (Not the actual implementation, only representative)
 
