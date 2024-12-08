@@ -11,10 +11,14 @@
             "id": "51439dd7935d1141",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Understanding Graphs, Automatic Differentiation and Autograd.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Understanding Graphs, Automatic Differentiation and Autograd"
             }
           }
         ]
@@ -91,6 +95,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "Understanding Graphs, Automatic Differentiation and Autograd.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -109,6 +114,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "Understanding Graphs, Automatic Differentiation and Autograd.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -121,7 +127,9 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {},
+          "state": {
+            "file": "Understanding Graphs, Automatic Differentiation and Autograd.md"
+          },
           "icon": "lucide-list",
           "title": "Outline"
         }
@@ -154,5 +162,26 @@
     }
   },
   "active": "51439dd7935d1141",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Untitled.md",
+    "Understanding Graphs, Automatic Differentiation and Autograd.md",
+    "Pytorch/Torch unsqueeze.md",
+    "Pasted image 20241203023815.png",
+    "Lessons learnt the hard way.md",
+    "Leaf Nodes.md",
+    "File Handling/Use of raw string in handling path.md",
+    "File Handling/Importing .py files from another folder.md",
+    "/Untitled.md",
+    "/Understanding Graphs, Automatic Differentiation and Autograd.md",
+    "/Pytorch/backward(vector) method.md",
+    "/Pytorch/Torch unsqueeze.md",
+    "/Pytorch/Explain - Relation of backward() and requires_grad.md",
+    "/Pasted image 20241203023815.png",
+    "/Lessons learnt the hard way.md",
+    "/Leaf Nodes.md",
+    "/File Handling/Use of raw string in handling path.md",
+    "/File Handling/Importing .py files from another folder.md",
+    "File Handling",
+    "/File Handling"
+  ]
 }
