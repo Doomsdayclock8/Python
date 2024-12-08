@@ -1,8 +1,10 @@
-- loss.backward() method automatically creates gradients for loss wrt the model parameters
-- ==**Condition 1 :**== model parameters must have (requires_grad=True) because only those parameters calculations are measured by Pytorch
+- loss.backward() method automatically creates gradients for loss wrt the [[Leaf]]
+- ## **Condition 1 :**
+	- model parameters must have (requires_grad=True) because only those parameters calculations are measured by Pytorch
 	- ### #More_on: [[Explain - Relation of backward() and requires_grad]]
-- ==**Condition 2 :**== The loss Function has to be a scalar value because a tensor/vector having its gradient evaluated wrt all the weights(another tensor) requires a Jacobian Matrix which is not handled by .backward()
-	- - **Scalar Requirement**: `.backward()` can only be called on scalars because it can only computes gradients for a scalar loss function with respect to its inputs.
+- ## **Condition 2 :** 
+- The loss Function has to be a scalar value because a tensor/vector having its gradient evaluated wrt all the weights(another tensor) requires a Jacobian Matrix which is not handled by .backward()
+	- **Scalar Requirement**: `.backward()` can only be called on scalars because it can only computes gradients for a scalar loss function with respect to its inputs.
 	- **Reduce First**: Non-scalar tensors need to be reduced (e.g., via `sum` or `mean`) to a scalar before calling `.backward()`.
 	- **Use `torch.autograd.grad()`** for more advanced gradient computations if non-scalar outputs are necessary.
 	- ### #More_on : [[Why .backward() Can Only Be Called on Scalars]]
