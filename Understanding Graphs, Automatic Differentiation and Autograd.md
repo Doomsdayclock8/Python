@@ -1,21 +1,20 @@
 
 ![PyTorch 101, Understanding Graphs, Automatic Differentiation and Autograd](https://www.digitalocean.com/api/static-content/v1/images?src=%2F_next%2Fstatic%2Fmedia%2Fintro-to-cloud.d49bc5f7.jpeg&width=1920 "PyTorch 101, Understanding Graphs, Automatic Differentiation and Autograd")
 
-## [Introduction](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#introduction)[](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#introduction)
-
+## [Introduction](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#introduction)
 PyTorch is one of the foremost python deep learning libraries out there. It’s the go to choice for deep learning research, and as each days passes by, more and more companies and research labs are adopting this library.
 
 In this series of tutorials, we will be introducing you to PyTorch, and how to make the best use of the libraries as well the ecosystem of tools built around it. We’ll first cover the basic building blocks, and then move onto how you can quickly prototype custom architectures. We will finally conclude with a couple of posts on how to scale your code, and how to debug your code if things go awry.
 
 You can get all the code in this post, (and other posts as well) in the Github repo [here](https://github.com/Paperspace/PyTorch-101-Tutorial-Series).
 
-## [Prerequisites](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#prerequisites)[](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#prerequisites)
+## [Prerequisites](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#prerequisites)
 
 1. Chain rule
 2. Basic Understanding of Deep Learning
 3. PyTorch 1.0
 
-## [Automatic Differentiation](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#automatic-differentiation)[](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#automatic-differentiation)
+## [Automatic Differentiation](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#automatic-differentiation)
 
 A lot of tutorial series on PyTorch would start begin with a rudimentary discussion of what the basic structures are. However, I’d like to instead start by discussing automatic differentiation first.
 
@@ -30,7 +29,7 @@ The forward pass is pretty straight forward. The output of one layer is the inpu
 
 Backward pass is a bit more complicated since it requires us to use the chain rule to compute the gradients of weights w.r.t to the loss function.
 
-## [A toy example](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#a-toy-example)[](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#a-toy-example)
+## [A toy example](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#a-toy-example)
 
 Let us take an very simple neural network consisting of just 5 neurons. Our neural network looks like the following.
 
@@ -48,7 +47,7 @@ $$ \frac{\partial{L}}{\partial{w_4}} = \frac{\partial{L}}{\partial{d}} * \frac{\
 
 All these gradients have been computed by applying the chain rule. Note that all the individual gradients on the right hand side of the equations mentioned above can be computed directly since the _numerators_ of the gradients are explicit functions of the _denominators._
 
-## [Computation Graphs](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#computation-graphs)[](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#computation-graphs)
+## [Computation Graphs](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#computation-graphs)
 
 We could manually compute the gradients of our network as it was very simple. Imagine, what if you had a network with 152 layers. Or, if the network had multiple branches.
 
@@ -64,7 +63,7 @@ Computation Graph for our very simple Neural Network
 
 The variables, _b,c_ and _d_ are created as a result of mathematical operations, whereas variables _a, w1, w2, w3_ and _w4_ are initialised by the user itself. Since, they are not created by any mathematical operator, nodes corresponding to their creation is represented by their name itself. This is true for all the _leaf_ nodes in the graph.
 
-## [Computing the gradients](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#computing-the-gradients)[](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#computing-the-gradients)
+## [Computing the gradients](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#computing-the-gradients)
 
 Now, we are ready to describe how we will compute gradients using a computation graph.
 
@@ -98,11 +97,11 @@ If you see, the product is precisely the same expression we derived using chain 
 
 $$\frac{\partial{f}}{\partial{w_4}} = \frac{\partial{L}}{\partial{d}}*\frac{\partial{d}}{\partial{b}}*\frac{\partial{b}}{\partial{a}} + \frac{\partial{L}}{\partial{d}}*\frac{\partial{d}}{\partial{c}}*\frac{\partial{c}}{\partial{a}} $$
 
-## [PyTorch Autograd](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#pytorch-autograd)[](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#pytorch-autograd)
+## [PyTorch Autograd](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#pytorch-autograd)
 
 Now we get what a computational graph is, let’s get back to PyTorch and understand how the above is implemented in PyTorch.
 
-### [Tensor](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#tensor)[](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#tensor)
+### [Tensor](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#tensor)
 
 `Tensor` is a data structure which is a fundamental building block of PyTorch. `Tensor`s are pretty much like numpy arrays, except that unlike numpy, tensors are designed to take advantage of parallel computation capabilities of a GPU. A lot of Tensor syntax is similar to that of numpy arrays.
 
@@ -162,7 +161,7 @@ The grad fn for d is <AddBackward0 object at 0x1033afe48>
 
 One can use the member function `is_leaf` to determine whether a variable is a leaf `Tensor` or not.
 
-### [Function](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#function)[](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#function)
+### [Function](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#function)
 
 All mathematical operations in PyTorch are implemented by the _torch.nn.Autograd.Function_ class. This class has two important member functions we need to look at.
 

@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1dbe33bfeaf059ba",
+        "id": "758a02e09dca5303",
         "type": "tabs",
         "children": [
           {
-            "id": "26c58f1cf1e55af6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pytorch/Explain - Relation of backward() and requires_grad.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Explain - Relation of backward() and requires_grad"
-            }
-          },
-          {
-            "id": "a4b3a6e6862f0457",
+            "id": "c87a349ad92c2c2f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,23 +20,8 @@
               "icon": "lucide-file",
               "title": "Understanding Graphs, Automatic Differentiation and Autograd"
             }
-          },
-          {
-            "id": "797feee6635d7ec9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -69,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTimeReverse"
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -106,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
     "id": "bc7eb69ecc420020",
@@ -166,10 +137,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "Understanding Graphs, Automatic Differentiation and Autograd.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of conflict-files-obsidian-git"
+              "title": "Outline of Understanding Graphs, Automatic Differentiation and Autograd"
             }
           },
           {
@@ -188,8 +159,8 @@
             "state": {
               "type": "mermaid-toolbar-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
             }
           }
         ],
@@ -197,7 +168,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,25 +183,26 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "268169517809cf7d",
+  "active": "c87a349ad92c2c2f",
   "lastOpenFiles": [
-    "Untitled.md",
-    "conflict-files-obsidian-git.md",
-    "Pytorch/Torch unsqueeze.md",
-    "Pasted image 20241203023815.png",
-    "Lessons learnt the hard way.md",
-    "File Handling/Use of raw string in handling path.md",
-    "File Handling/Importing .py files from another folder.md",
-    "File Handling",
-    "Understanding Graphs, Automatic Differentiation and Autograd.md",
-    "Pytorch/Explain - Relation of backward() and requires_grad.md",
-    "Pytorch/Gradient Descent & Backpropagation in Pytorch.md",
-    "Pytorch/backward(vector) method.md",
-    "Leaf Nodes.md",
-    "Pytorch/1. Create Tensor.md",
     "Design Neural Network in Torch.md",
+    "Pytorch/Torch unsqueeze.md",
+    "Untitled.md",
+    "Lessons learnt the hard way.md",
+    "Why naming forward pass as forward is necessary.md",
+    "Understanding Graphs, Automatic Differentiation and Autograd.md",
+    "Leaf Nodes.md",
+    "File Handling/Importing .py files from another folder.md",
+    "File Handling/Use of raw string in handling path.md",
+    "Untitled",
+    "File Handling",
+    "Pasted image 20241203023815.png",
+    "Pytorch/Explain - Relation of backward() and requires_grad.md",
     "Pytorch/Why .backward() Can Only Be Called on Scalars.md",
     "Pytorch/Loss Function is a function of input, label output & weights.md",
+    "Pytorch/backward(vector) method.md",
+    "Pytorch/1. Create Tensor.md",
+    "Pytorch/Gradient Descent & Backpropagation in Pytorch.md",
     "Pytorch/Scalar vs Non-Scalar Gradient in Pytorch.md",
     "Pytorch/weight.grad() function.md",
     "Pasted Image 20241130200929_801.png",
