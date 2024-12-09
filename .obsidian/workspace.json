@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pytorch/Understanding Graphs, Automatic Differentiation and Autograd.md",
+                "file": "Pytorch/1. Tensors, Autograd & Torch.NN pipeline/Understanding Graphs, Automatic Differentiation and Autograd.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pytorch/Create Tensor.md",
+                "file": "Pytorch/1. Tensors, Autograd & Torch.NN pipeline/Create Tensor.md",
                 "mode": "source",
                 "source": false
               },
@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "List of Contents.md",
+                "file": "Pytorch/Why naming forward pass as forward is necessary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "List of Contents"
+              "title": "Why naming forward pass as forward is necessary"
             }
           }
         ],
@@ -106,7 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 414.5
   },
   "right": {
     "id": "bc7eb69ecc420020",
@@ -166,10 +166,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "List of Contents.md"
+                "file": "Pytorch/Why naming forward pass as forward is necessary.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of List of Contents"
+              "title": "Outline of Why naming forward pass as forward is necessary"
             }
           },
           {
@@ -214,28 +214,28 @@
   },
   "active": "3e8e33896bbe3d14",
   "lastOpenFiles": [
-    "Pytorch/Create Tensor.md",
-    "List of Contents.md",
+    "Pytorch/0.List of Contents.md",
+    "Pytorch/1. Tensors, Autograd & Torch.NN pipeline",
+    "Pytorch/1. Tensors, Autograd & Torch.NN pipeline/Loss Function is a function of input, label output & weights.md",
+    "Pytorch/Scalar vs Non-Scalar Gradient in Pytorch.md",
+    "Pytorch/Design Neural Network in Torch.md",
+    "Pytorch/1. Tensors, Autograd & Torch.NN pipeline/Gradient Descent & Backpropagation in Pytorch.md",
+    "Pytorch/1. Tensors, Autograd & Torch.NN pipeline/Types of Nodes in Pytorch.md",
+    "Pytorch/Explain - Relation of backward() and requires_grad.md",
+    "Pytorch/1. Tensors, Autograd & Torch.NN pipeline/Create Tensor.md",
     "Pytorch/Layer Normalization.md",
     "ImageBank/Pasted image 20241203023815.png",
     "ImageBank",
-    "Pytorch/Leaf Nodes.md",
     "Pytorch/Torch.nn Module.md",
-    "Pytorch/Understanding Graphs, Automatic Differentiation and Autograd.md",
-    "Pytorch/Design Neural Network in Torch.md",
+    "Pytorch/1. Tensors, Autograd & Torch.NN pipeline/Understanding Graphs, Automatic Differentiation and Autograd.md",
     "Pytorch/Torch unsqueeze.md",
     "Lessons learnt the hard way.md",
     "Pytorch/Why naming forward pass as forward is necessary.md",
     "File Handling/Importing .py files from another folder.md",
     "File Handling/Use of raw string in handling path.md",
-    "Untitled",
     "File Handling",
-    "Pytorch/Explain - Relation of backward() and requires_grad.md",
     "Pytorch/Why .backward() Can Only Be Called on Scalars.md",
-    "Pytorch/Loss Function is a function of input, label output & weights.md",
     "Pytorch/backward(vector) method.md",
-    "Pytorch/Gradient Descent & Backpropagation in Pytorch.md",
-    "Pytorch/Scalar vs Non-Scalar Gradient in Pytorch.md",
     "Pytorch/weight.grad() function.md",
     "Pasted Image 20241130200929_801.png",
     "Excalidraw",
@@ -246,7 +246,6 @@
     "Dictionary/Creating Dictionary.md",
     "Packages",
     "List , Tuple , Set/Tuple , List , Set Definition.md",
-    "Dictionary/Access Dictionary Keys through Values.md",
     "Pytorch",
     "List , Tuple , Set",
     "Dictionary",

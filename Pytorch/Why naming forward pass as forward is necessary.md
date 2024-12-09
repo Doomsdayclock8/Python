@@ -8,14 +8,9 @@ PyTorch’s __call__ method is defined to look for a method named forward in you
 
 If forward is not defined, calling the model object will raise an error.
 
-
-
 2. Consistency:
 
 PyTorch uses forward as the standard name for defining the forward pass, ensuring consistency across models.
-
-
-
 
 
 ---
@@ -55,7 +50,7 @@ AttributeError: 'MyModel' object has no attribute 'forward'
 How to Use a Custom Method Name?
 
 If you absolutely need to use a custom name, you can override the __call__ method in your model to call your custom method instead of forward:
-
+```Python
 class MyModel(nn.Module):
     def __init__(self):
         super(MyModel, self).__init__()
@@ -67,12 +62,13 @@ class MyModel(nn.Module):
     # Override __call__ to use a custom method
     def __call__(self, *args, **kwargs):
         return self.my_custom_forward(*args, **kwargs)
-
+```
 # Instantiate and call the model
+```Python
 model = MyModel()
 x = torch.randn(1, 10)
 output = model(x)  # Now it works
-
+```
 
 ---
 
