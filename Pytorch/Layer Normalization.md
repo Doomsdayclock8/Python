@@ -1,6 +1,3 @@
-# Torch Unsqueeze 
-# Torch register_buffer 
-# Layer Normalization
 Layer normalization is a technique used in deep learning to stabilize and accelerate the training of neural networks. Here's a concise explanation:
 
 1. **Purpose**: It normalizes the activations (outputs) of a layer across all neurons in the layer, ensuring that their mean is 0 and variance is 1. This helps the model learn more effectively by reducing internal covariate shift (variations in input distributions across layers during training).

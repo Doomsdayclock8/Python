@@ -1,4 +1,4 @@
-
+[Original Link](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation)
 ![PyTorch 101, Understanding Graphs, Automatic Differentiation and Autograd](https://www.digitalocean.com/api/static-content/v1/images?src=%2F_next%2Fstatic%2Fmedia%2Fintro-to-cloud.d49bc5f7.jpeg&width=1920 "PyTorch 101, Understanding Graphs, Automatic Differentiation and Autograd")
 
 ## [Introduction](https://www.digitalocean.com/community/tutorials/pytorch-101-understanding-graphs-and-automatic-differentiation#introduction)

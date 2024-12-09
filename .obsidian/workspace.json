@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Understanding Graphs, Automatic Differentiation and Autograd.md",
+                "file": "Pytorch/Understanding Graphs, Automatic Differentiation and Autograd.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "Understanding Graphs, Automatic Differentiation and Autograd"
             }
+          },
+          {
+            "id": "2a707b738df6c58c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pytorch/Create Tensor.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Create Tensor"
+            }
+          },
+          {
+            "id": "3e8e33896bbe3d14",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "List of Contents.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "List of Contents"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -40,7 +69,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTimeReverse"
+                "sortOrder": "alphabetical"
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -137,10 +166,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Understanding Graphs, Automatic Differentiation and Autograd.md"
+                "file": "List of Contents.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Understanding Graphs, Automatic Differentiation and Autograd"
+              "title": "Outline of List of Contents"
             }
           },
           {
@@ -183,25 +212,28 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c87a349ad92c2c2f",
+  "active": "3e8e33896bbe3d14",
   "lastOpenFiles": [
-    "Design Neural Network in Torch.md",
+    "Pytorch/Create Tensor.md",
+    "List of Contents.md",
+    "Pytorch/Layer Normalization.md",
+    "ImageBank/Pasted image 20241203023815.png",
+    "ImageBank",
+    "Pytorch/Leaf Nodes.md",
+    "Pytorch/Torch.nn Module.md",
+    "Pytorch/Understanding Graphs, Automatic Differentiation and Autograd.md",
+    "Pytorch/Design Neural Network in Torch.md",
     "Pytorch/Torch unsqueeze.md",
-    "Untitled.md",
     "Lessons learnt the hard way.md",
-    "Why naming forward pass as forward is necessary.md",
-    "Understanding Graphs, Automatic Differentiation and Autograd.md",
-    "Leaf Nodes.md",
+    "Pytorch/Why naming forward pass as forward is necessary.md",
     "File Handling/Importing .py files from another folder.md",
     "File Handling/Use of raw string in handling path.md",
     "Untitled",
     "File Handling",
-    "Pasted image 20241203023815.png",
     "Pytorch/Explain - Relation of backward() and requires_grad.md",
     "Pytorch/Why .backward() Can Only Be Called on Scalars.md",
     "Pytorch/Loss Function is a function of input, label output & weights.md",
     "Pytorch/backward(vector) method.md",
-    "Pytorch/1. Create Tensor.md",
     "Pytorch/Gradient Descent & Backpropagation in Pytorch.md",
     "Pytorch/Scalar vs Non-Scalar Gradient in Pytorch.md",
     "Pytorch/weight.grad() function.md",
@@ -215,11 +247,9 @@
     "Packages",
     "List , Tuple , Set/Tuple , List , Set Definition.md",
     "Dictionary/Access Dictionary Keys through Values.md",
-    "Dictionary/Looping Through Dictionary.md",
     "Pytorch",
     "List , Tuple , Set",
     "Dictionary",
-    "List , Tuple , Set/list comprehension.md",
     "OOP",
     "API"
   ]
