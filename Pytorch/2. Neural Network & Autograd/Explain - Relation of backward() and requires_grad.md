@@ -1,6 +1,7 @@
 ## When you call loss.backward(), the gradient of the loss is computed only with respect to the variables (or parameters) that have requires_grad=True
-- [[Leaf Nodes]] are the variables (or parameters) that have requires_grad=True and are user created.
-- Generally `requires_grad=True` is used only for leaf nodes. but if other variables also have requires grad=true they also participate in gradient with respect to them be
+- [[Types of Nodes in Pytorch]] are the variables (or parameters) that have requires_grad=True and are user created.
+- Generally `requires_grad=True` is used only for leaf nodes. 
+- Intermediate variables created from the leaf nodes  also have `requires grad=true` (inherently) as they also participate in gradient calculation of root node(loss function) 
 ### Key Points:
 
 1. **`requires_grad=True` Marks Variables for Gradient Calculation:**
@@ -34,5 +35,7 @@ print("Gradient of y:", y.grad)  # Output: None, because y.requires_grad=False
 ```
 ### **Explanation:**
 
-- The gradient of `loss` with respect to `x` is computed: ∂(loss)∂x=2z⋅∂z∂x=2(6)⋅3=216\frac{\partial (\text{loss})}{\partial x} = 2z \cdot \frac{\partial z}{\partial x} = 2(6) \cdot 3 = 216∂x∂(loss)​=2z⋅∂x∂z​=2(6)⋅3=216
+- The gradient of `loss` with respect to `x` is computed: $$
+- ∂(loss)∂x=2z⋅∂z∂x=2(6)⋅3=216\frac{\partial (\text{loss})}{\partial x} = 2z \cdot \frac{\partial z}{\partial x} = 2(6) \cdot 3 = 216∂x∂(loss)​=2z⋅∂x∂z​=2(6)⋅3=216
+- $$
 - No gradient is computed for `y` because `requires_grad=False`.

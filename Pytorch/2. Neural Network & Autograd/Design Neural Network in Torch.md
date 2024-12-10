@@ -3,7 +3,7 @@
 - Gradients Computation: Manually
 - Loss Computation: Manually
 - Parameter updates: Manually
-```
+```Python
 import numpy as np
 
 # initialize x, y and w
@@ -79,7 +79,7 @@ Prediction after training: f(5)=9.999
 - Gradients Computation: Autograd
 - Loss Computation: Manually
 - Parameter updates: Manually
-```
+```Python
 import torch
 
 # initialize x, y and w
@@ -174,7 +174,7 @@ Prediction after training: f(5)=10.000
 - Gradients Computation: Autograd
 - Loss Computation: PyTorch Loss
 - Parameter updates: PyTorch Optimizer
-```
+```Python
 import torch
 
 # initialize x, y and w
@@ -232,7 +232,7 @@ for epoch in range(n_iters):
 print(f'Prediction after training: f(5)={forward(5):.3f}')
 ```
 ### Output: 
-```
+```Python
 Prediction before training: f(5)=0.000
 epoch 1: w=0.300, loss=30.00000000
 epoch 11: w=1.665, loss=1.16278565
@@ -253,7 +253,7 @@ Prediction after training: f(5)=10.000
 - Gradients Computation: Autograd
 - Loss Computation: PyTorch Loss
 - Parameter updates: PyTorch Optimizer
-```
+```Python
 import torch
 
 import torch.nn as nn
