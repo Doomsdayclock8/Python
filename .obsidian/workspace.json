@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pytorch/2. Backpropagation/weight.grad() function.md",
+                "file": "torch.rand.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "weight.grad() function"
+              "title": "torch.rand"
             }
           }
         ],
@@ -152,10 +152,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pytorch/2. Backpropagation/weight.grad() function.md"
+                "file": "torch.rand.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of weight.grad() function"
+              "title": "Outline of torch.rand"
             }
           },
           {
@@ -202,6 +202,8 @@
   "active": "670769f0d5ae1788",
   "lastOpenFiles": [
     "Pytorch/0.List of Contents.md",
+    "torch.rand.md",
+    "Pytorch/2. Backpropagation/weight.grad() function.md",
     "Pytorch/2. Backpropagation",
     "torch.arange vs torch.linspace.md",
     "Pytorch/1. Tensors & Backpropagation/tensor.shape vs torch.size().md",
@@ -227,7 +229,6 @@
     "Pytorch/3. Neural Network/Types of Nodes in Pytorch.md",
     "ImageBank/Pasted image 20241203023815.png",
     "Pytorch/3. Neural Network/Understanding Graphs, Automatic Differentiation and Autograd.md",
-    "Pytorch/2. Backpropagation/weight.grad() function.md",
     "Pytorch/2. Backpropagation/Scalar vs Non-Scalar Gradient in Pytorch.md",
     "Pytorch/1. Tensors & Backpropagation",
     "ImageBank",
