@@ -1,1 +1,1 @@
-1. Renaming a juyter notebook in vscode resets the kernel
+1. Renaming a jupyter notebook in vscode resets the kernel
